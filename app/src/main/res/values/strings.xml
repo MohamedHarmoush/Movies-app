@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="sort_by">Sort by</string>
+    <string name="title">Title</string>
+    <string name="vote">Vote</string>
+    <string name="refresh">Refresh</string>
+    <string name="filter_by">Filter by</string>
+    <string name="like">like</string>
+    <string name="unlike">unlike</string>
+    <string name="movie_poster_image_view_description">This is a movie poster</string>
+    <string name="release_date_s">Release Date: %s</string>
+    <string name="summary">Summary</string>
+    <string name="trailers">Trailers</string>
+    <string name="reviews">Reviews</string>
+    <string name="title_captain_marvel">Captain Marvel</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="title_attribute">title</string>
+    <string name="vote_attribute">vote_average</string>
+</resources>
