@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:title="@string/app_name"/>
+
+    <RelativeLayout
+            android:id="@+id/layout_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_20dp">
+
+        <Button
+                android:id="@+id/btn_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin_10dp"
+                android:text="@string/refresh"
+                android:textAllCaps="false"/>
+
+        <TextView
+                android:id="@+id/tv_sort_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/rg_sort_by"
+                android:layout_marginBottom="@dimen/margin_6dp"
+                android:layout_toRightOf="@id/btn_refresh"
+                android:text="@string/sort_by"/>
+
+        <RadioGroup
+                android:id="@+id/rg_sort_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_60dp"
+                android:layout_toRightOf="@id/btn_refresh"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:id="@+id/btn_sort_by_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"/>
+
+            <RadioButton
+                    android:id="@+id/btn_sort_by_vote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/vote"/>
+        </RadioGroup>
+
+        <TextView
+                android:id="@+id/tv_filter_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_sort_by"
+                android:layout_alignBottom="@id/rg_filter_by"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_6dp"
+                android:text="@string/filter_by"/>
+
+        <RadioGroup
+                android:id="@+id/rg_filter_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rg_sort_by"
+                android:layout_alignLeft="@id/rg_sort_by"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:id="@+id/btn_filter_by_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/like"/>
+
+            <RadioButton
+                    android:id="@+id/btn_filter_by_unlike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unlike"/>
+            <RadioButton
+                    android:id="@+id/btn_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="All"/>
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+    <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/layout_options"
+            android:background="@android:color/black"/>
+
+    <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_options"
+            android:layout_margin="@dimen/margin_10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_movies_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

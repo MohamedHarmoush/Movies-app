@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_6dp">6dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="toolbar_inset">50dp</dimen>
+    <dimen name="size_movie_title">24sp</dimen>
+    <dimen name="size_movie_summary_title">18sp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_35dp">35dp</dimen>
+    <dimen name="size_30dp">30dp</dimen>
+    <dimen name="height_60dp">60dp</dimen>
+    <dimen name="width_50dp">50dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+</resources>
